@@ -20,6 +20,8 @@
     --navy-blue: #1e2a47;
 } 
 
+/* 22 18 12 11 */
+
 h1 {
     font-size: 26px;
     line-height: 38px;
@@ -54,7 +56,7 @@ body {
 img {
     height: 100px;
     width: 100px;
-    margin: 0px 25px;
+    margin: 20px 25px 0px;
     border-radius: 50px;
 }
 
@@ -166,11 +168,15 @@ img {
     align-items: center;
     justify-content: flex-end;
     flex-grow: 2;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 20px 10px 0px;
 }
 
 .join-date span {
     padding-left: 10px;
+}
+
+.join-date-mobile {
+    display: none;
 }
 
 .profile-description {
@@ -230,6 +236,56 @@ img {
 /* Media Queries */
 
 @media (max-width: 800px) {
+
+
+    .interface-header {
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .profile-names a {
+        padding-bottom: 5px;
+    }
+
+    .join-date {
+       display: none;
+    }
+
+    .join-date-mobile {
+        display: flex;
+        color: var(--grey);
+        font-weight: 500;
+    }
+
+    .join-date-mobile span {
+        padding-left: 10px;
+    }
+
+    .profile-description {
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+
+    .profile-description,
+    .profile-stats {
+        margin: auto;
+        width: min(80%, 600px)
+    }
+
+    .profile-stats h2 {
+        font-size: 18px;
+    }
+
+    .profile-contacts {
+        margin: auto;
+    }
+
+    .contacts-col-two {
+        padding-right: 80px;
+    }
     
-    
+}
+
+@media (max-width: 425px) {
+
 }
