@@ -45,7 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     font-size: 15px;
     line-height: 25px;
     background-color: var(--light-grey);
@@ -60,7 +60,7 @@ img {
 
 .page-header {
     width: min(85vw, 900px);
-    margin-bottom: 50px;
+    margin: 30px 0px 50px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -130,7 +130,7 @@ img {
 }
 
 .result-interface {
-    height: max(50vh, 550px);
+    height: max(70vh, 550px);
     width: min(85vw, 900px);
     display: flex;
     flex-direction: column;
@@ -426,5 +426,3 @@ img {
         font-size: 10px;
     }
 }
-
-
