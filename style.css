@@ -16,7 +16,7 @@
     /* DARK MODE */
 
     --white-dm: #ffffff;
-    --black-dm: #141d2f;
+    --dark-blue: #141d2f;
     --navy-blue: #1e2a47;
 } 
 
@@ -54,8 +54,12 @@ body {
 img {
     height: 100px;
     width: 100px;
-    margin: 20px 25px 0px;
+    margin: 60px 25px 0px;
     border-radius: 50px;
+}
+
+.placeholder-text::placeholder {
+    color: #ffffff;
 }
 
 .page-header {
@@ -66,27 +70,30 @@ img {
     align-items: baseline;
 }
 
-.dark-mode,
-.light-mode {
+.dark-mode {
     display: flex;
     letter-spacing: 4px;
 }
 
-.dark-mode h3,
-.light-mode h3 {
+.dark-mode h3 {
     padding-right: 15px;
 }
 
-.light-mode svg,
 .dark-mode svg {
     display: flex;
     align-items: center;
 }
 
-.dark-mode:hover,
-.light-mode:hover {
+.dark-mode:hover {
     cursor: pointer;
     color: var(--blue-grey);
+}
+
+.light-icon {
+    visibility: hidden;
+    position: relative;
+    right: 21px;
+
 }
 
 .searchbar-container {
@@ -143,7 +150,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 35px 15px 15px
+    margin: 5px 15px 15px
 }
 
 .profile-header {
@@ -160,7 +167,7 @@ img {
 }
 
 .join-date {
-    color: var(--grey);
+    color: var(--blue-grey);
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -178,19 +185,21 @@ img {
 }
 
 .profile-description {
+    font-size: 14px;
     margin: 0px 0px 45px 165px;
     width: 75%;
-    color: var(--grey);
+    color: var(--blue-grey);
 }
 
 .profile-stats {
     width: min(75%, 600px);
     display: flex;
     justify-content: space-evenly;
-    margin: 0px 40px 15px 165px;
+    margin: 0px 40px 35px 165px;
     padding: 25px 0px;
     border-radius: 10px;
     background-color: var(--light-grey);
+    text-align: center;
 }
 
 .profile-stats h4 {
@@ -201,8 +210,9 @@ img {
     height: 130px;
     width: min(75%, 450px);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin: 0px 0px 0px 165px;
 }
 
@@ -226,9 +236,13 @@ img {
 .twitter h3,
 .website h3,
 .company h3{
-    color: var(--grey);
+    color: var(--blue-grey);
     font-weight: 500;
-    padding-left: 15px;
+    padding: 5px 0px 5px 15px;
+}
+
+.location h3 {
+    padding-left: 20px;
 }
 
 /* Media Queries */
@@ -241,6 +255,7 @@ img {
 
     .interface-header {
         justify-content: flex-start;
+        margin-top: 5px;
         padding-bottom: 10px;
     }
 
@@ -254,17 +269,13 @@ img {
 
     .join-date-mobile {
         display: flex;
-        color: var(--grey);
+        color: var(--blue-grey);
         font-weight: 500;
     }
 
-    .join-date-mobile span {
-        padding-left: 10px;
-    }
-
     .profile-description {
-        font-size: 14px;
-        padding-bottom: 30px;
+        font-size: 13px;
+        padding-bottom: 15px;
     }
 
     .profile-description,
@@ -289,9 +300,13 @@ img {
     .twitter h3,
     .website h3,
     .company h3 {
-       font-size: 14px; 
+       font-size: 12px; 
     }
-    
+
+    .location h3 {
+        padding-left: 20px;
+    }
+
 }
 
 @media (max-width: 425px) {
@@ -425,4 +440,24 @@ img {
         margin: auto;
         font-size: 10px;
     }
+
+    .username {
+        font-size: 10px;
+    }
+
+    .join-date-mobile {
+        font-size: 10px;
+    }
+
+    .profile-description {
+        font-size: 8px;
+    }
+
+    .location h3,
+    .twitter h3,
+    .website h3,
+    .company h3 {
+        font-size: 7px;
+    }
+
 }
