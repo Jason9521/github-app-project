@@ -142,7 +142,7 @@ img {
 
 .result-interface {
     height: max(70vh, 550px);
-    width: min(85vw, 900px);
+    width: min(90vw, 1000px);
     display: flex;
     flex-direction: column;
     background-color: var(--white-lm);
@@ -154,7 +154,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 15px 15px
+    margin: 5px 15px 0px
 }
 
 .profile-header {
@@ -197,6 +197,7 @@ img {
     margin: 0px 0px 45px 165px;
     width: 75%;
     color: var(--blue-grey);
+    overflow: scroll;
 }
 
 .profile-stats {
@@ -339,7 +340,7 @@ img {
     img {
         height: 70px;
         width: 70px;
-        margin: 15px 5px 0px;
+        margin: 15px 25px 0px 0px;
     }
 
     .page-header {
